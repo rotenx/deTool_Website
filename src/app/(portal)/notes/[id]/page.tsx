@@ -26,7 +26,7 @@ async function Data(url:string) {
         headers.append('Access-Control-Allow-Credentials', 'true');
 
         headers.append('GET', 'POST');
-        const dat: any = await fetch("http://localhost:8000/single-notes", {
+        const dat: any = await fetch("https://jade-smoggy-barnacle.cyclic.app/single-notes", {
             method: "POST",
             headers: headers,
             body: JSON.stringify(payload)
@@ -53,7 +53,7 @@ async function UserData() {
         headers.append('Content-Type', 'application/json');
         headers.append('Accept', 'application/json');
 
-        const dat: any = await fetch("http://localhost:8000/user-details", {
+        const dat: any = await fetch("https://jade-smoggy-barnacle.cyclic.app/user-details", {
             method: "POST",
             headers:headers,
             body: JSON.stringify(payload)
