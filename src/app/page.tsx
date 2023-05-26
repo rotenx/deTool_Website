@@ -1,10 +1,19 @@
 import Image from 'next/image'
-import Link from 'next/link'
-export default function Home() {
+import LoginContainer from './(auth)/Components/login/LoginContainer'
+import styles from './page.module.css'
+export default function LoginHome() {
   return (
     <>
-    redirecting to main page...
-    <Link href={"/dashboard"} passHref>click me</Link>
+      <div className={styles.main}>
+        <div className={styles.mainOne}>
+          <LoginContainer />
+        </div>
+        <div className={styles.mainTwo}>
+          <div className={styles.mainTwoImage}>
+            <Image src={"/images/login.jpg"} fill style={{ objectFit: "contain" }} alt='login' />
+          </div>
+        </div>
+      </div>
     </>
   )
 }
